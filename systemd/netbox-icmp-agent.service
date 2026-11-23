@@ -1,0 +1,17 @@
+[Unit]
+Description=NetBox ICMP discovery agent
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=netbox-scan
+Group=netbox-scan
+ExecStart=/usr/local/bin/netbox-icmp-agent /etc/netbox-icmp-agent/agent.toml
+AmbientCapabilities=CAP_NET_RAW
+CapabilityBoundingSet=CAP_NET_RAW
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+TimeoutStartSec=55min

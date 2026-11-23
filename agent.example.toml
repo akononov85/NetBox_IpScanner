@@ -1,0 +1,10 @@
+netbox_url = "https://netbox.advc.ru/"
+token = ""
+# Bearer for v2 tokens, Token for v1 tokens.
+auth_scheme = "Token"
+site_name = "Rum"
+apply = false
+max_addresses = 4096
+scan_timeout_seconds = 180
+# Only list VRFs reached unambiguously by this agent's routing table.
+reachable_vrf_ids = []

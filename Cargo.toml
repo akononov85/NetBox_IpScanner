@@ -1,0 +1,14 @@
+[package]
+name = "netbox-icmp-agent"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+ipnet = "2"
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "json", "native-tls"] }
+roxmltree = "0.20"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+snmp2 = { version = "0.5.2", default-features = false }
+toml = "0.8"
